@@ -5,4 +5,7 @@ for i in range(100):
         string += 'Fizz'
     if i % 5 == 0:
         string += 'Buzz'
-    print(str(i) + ': ' + string)
+    if string:
+        print(string)
+    else:
+        print(i)
