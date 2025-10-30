@@ -4,7 +4,9 @@ import requests
 domain = 'https://fakestoreapi.com'
 
 def truncate(string: str, n: int) -> str:
-    if len(string): 
+    if len(string) > n:
+        return string[:n][:-3] + '...'
+    return string
 
 def get_products():
     return requests.get(domain + '/products').json()
