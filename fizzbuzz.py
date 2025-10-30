@@ -1,11 +1,12 @@
-# Solves FizzBuzz
-for i in range(100):
-    string = ''
+# fizzbuzz.py
+i = 1
+while i <= 100:
+    answer = ''
     if i % 3 == 0:
-        string += 'Fizz'
+        answer = answer + 'Fizz'
     if i % 5 == 0:
-        string += 'Buzz'
-    if string:
-        print(string)
-    else:
-        print(i)
+        answer = answer + 'Buzz'
+    if len(answer) == 0:
+        answer = i
+    print(answer)
+    i = i + 1
